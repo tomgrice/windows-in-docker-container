@@ -1,0 +1,16 @@
+os:
+  hostname: fi.squareize.net
+  dns_nameservers:
+    - 8.8.8.8
+    - 1.1.1.1
+install:
+  mode: create
+  networks:
+    harvester-mgmt:
+      interfaces:
+      - name: ens3
+      default_route: true
+      method: static
+      ip: 95.217.127.217
+      subnet_mask: 255.255.255.0
+      gateway: 95.217.195.229
