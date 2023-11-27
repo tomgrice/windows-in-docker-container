@@ -7,8 +7,6 @@ install:
   mode: create
   networks:
     harvester-mgmt:
-      interfaces:
-      - name: ens3
       default_route: true
       method: static
       ip: 95.217.127.217
