@@ -5,9 +5,10 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm-256color
 
 RUN apt-get update -y && \
+    wget https://releases.hashicorp.com/vagrant/2.4.0/vagrant_2.4.0-1_amd64.deb && \
+    apt-get install -y qemu-kvm && \
+    apt-get install -y ./vagrant_2.4.0-1_amd64.deb && \
     apt-get install -y \
-    qemu-kvm \
-    vagrant \
     build-essential \
     libvirt-daemon-system \
     libvirt-dev \
